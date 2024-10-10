@@ -1,0 +1,15 @@
+.header_logo_image{
+    width: 140px;
+}
+
+a{
+    color: blueviolet !important;
+}
+
+.margin-bottom-15{
+    margin-bottom: 15px;
+}
+
+.header_center{
+    align-items: center;
+}
