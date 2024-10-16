@@ -11,12 +11,42 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./">Home</a>
         </li>
+
+        <?php
+          if(isset($_SESSION['user']['username'])) { ?>
+            <li class="nav-item">
+              <a class="nav-link" href="./server/requests.php?logout=true">Logout</a>
+            </li>
+        <?php } else { ?>
+            <li class="nav-item">
+              <a class="nav-link" href="?login=true">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?signup=true">Signup</a>
+            </li>
+        <?php } ?>
+
+        <!-- if user and username is present then show logout else login -->
+
+        <!-- <?php
+        if($_SESSION['user']['username']){ ?>
         <li class="nav-item">
+          <a class="nav-link" href="/discuss">Logout</a>
+        </li>
+        <?php } ?>
+        
+        <?php
+        if(!$_SESSION['user']['username']){ ?>
+          <li class="nav-item">
           <a class="nav-link" href="?login=true">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="?signup=true">Signup</a>
         </li>
+        <?php } ?> -->
+
+        <!-- user and username is is undefined in this method -->
+
         <li class="nav-item">
           <a class="nav-link" href="#">Category</a>
         </li>
